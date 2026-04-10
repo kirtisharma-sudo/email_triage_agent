@@ -4,17 +4,14 @@ env:
   entry_point: "environment:EmailEnv"
 
 tasks:
-  - id: "priority_task"
-    description: "Classify priority"
+  - id: "priority"
     difficulty: "easy"
     grader: "tasks.priority.grader:grade"
 
-  - id: "routing_task"
-    description: "Classify priority and department"
+  - id: "routing"
     difficulty: "medium"
     grader: "tasks.routing.grader:grade"
 
-  - id: "full_task"
-    description: "Full email triage"
+  - id: "full"
     difficulty: "hard"
     grader: "tasks.full.grader:grade"
