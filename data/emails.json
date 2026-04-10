@@ -20,4 +20,214 @@
     "department": "tech",
     "response": "Our technical team is investigating the issue."
   }
+  {
+    "email_text": "I need a refund ASAP, this is unacceptable!",
+    "sender": "user1@gmail.com",
+    "priority": "high",
+    "department": "support",
+    "response": "We are processing your refund request urgently."
+  },
+  {
+    "email_text": "hey, can u share pricing?",
+    "sender": "lead@startup.com",
+    "priority": "medium",
+    "department": "sales",
+    "response": "Our sales team will share pricing details shortly."
+  },
+  {
+    "email_text": "App crashes when I try login",
+    "sender": "user2@mail.com",
+    "priority": "high",
+    "department": "tech",
+    "response": "Our technical team is investigating the issue."
+  },
+  {
+    "email_text": "not able to access my account since yesterday",
+    "sender": "user3@gmail.com",
+    "priority": "high",
+    "department": "tech",
+    "response": "We are looking into your account access issue."
+  },
+  {
+    "email_text": "hello just wanted to know more about your plans",
+    "sender": "lead2@company.com",
+    "priority": "low",
+    "department": "sales",
+    "response": "We will provide more details about our plans."
+  },
+  {
+    "email_text": "WHY WAS I CHARGED TWICE???",
+    "sender": "angry@user.com",
+    "priority": "high",
+    "department": "support",
+    "response": "We are reviewing the duplicate charge issue."
+  },
+  {
+    "email_text": "need help... something wrong with app",
+    "sender": "confused@user.com",
+    "priority": "medium",
+    "department": "tech",
+    "response": "Our team will check the issue with the application."
+  },
+  {
+    "email_text": "pls cancel my subscription",
+    "sender": "user4@mail.com",
+    "priority": "medium",
+    "department": "support",
+    "response": "We will assist with your subscription cancellation."
+  },
+  {
+    "email_text": "pricing for enterprise??",
+    "sender": "cto@bigcorp.com",
+    "priority": "high",
+    "department": "sales",
+    "response": "Our sales team will reach out with enterprise pricing."
+  },
+  {
+    "email_text": "login page not loading properly",
+    "sender": "user5@gmail.com",
+    "priority": "medium",
+    "department": "tech",
+    "response": "We are investigating the login page issue."
+  },
+  {
+    "email_text": "can i get invoice for last month",
+    "sender": "finance@client.com",
+    "priority": "low",
+    "department": "support",
+    "response": "We will share your invoice shortly."
+  },
+  {
+    "email_text": "your service is down?? cant access anything",
+    "sender": "user6@gmail.com",
+    "priority": "high",
+    "department": "tech",
+    "response": "We are checking the service outage urgently."
+  },
+  {
+    "email_text": "just exploring options, send details",
+    "sender": "lead3@mail.com",
+    "priority": "low",
+    "department": "sales",
+    "response": "We will send you more details about our offerings."
+  },
+  {
+    "email_text": "refund not processed yet??",
+    "sender": "user7@gmail.com",
+    "priority": "high",
+    "department": "support",
+    "response": "We are expediting your refund request."
+  },
+  {
+    "email_text": "error 500 showing on dashboard",
+    "sender": "dev@client.com",
+    "priority": "high",
+    "department": "tech",
+    "response": "Our technical team is resolving the server error."
+  },
+  {
+    "email_text": "want demo asap",
+    "sender": "lead4@company.com",
+    "priority": "medium",
+    "department": "sales",
+    "response": "We will schedule a demo for you shortly."
+  },
+  {
+    "email_text": "idk what happened but app stopped working",
+    "sender": "user8@gmail.com",
+    "priority": "medium",
+    "department": "tech",
+    "response": "We will investigate the issue with your application."
+  },
+  {
+    "email_text": "please update billing info",
+    "sender": "user9@gmail.com",
+    "priority": "low",
+    "department": "support",
+    "response": "We will assist with updating your billing information."
+  },
+  {
+    "email_text": "this is urgent, system failing",
+    "sender": "ops@company.com",
+    "priority": "high",
+    "department": "tech",
+    "response": "We are urgently investigating the system failure."
+  },
+  {
+    "email_text": "how much does this cost monthly",
+    "sender": "lead5@mail.com",
+    "priority": "medium",
+    "department": "sales",
+    "response": "We will share monthly pricing details shortly."
+  },
+  {
+    "email_text": "subscription not working??",
+    "sender": "user10@gmail.com",
+    "priority": "medium",
+    "department": "support",
+    "response": "We are checking your subscription issue."
+  },
+  {
+    "email_text": "need urgent help with payment issue",
+    "sender": "user11@gmail.com",
+    "priority": "high",
+    "department": "support",
+    "response": "We are prioritizing your payment issue."
+  },
+  {
+    "email_text": "site slow af",
+    "sender": "user12@gmail.com",
+    "priority": "medium",
+    "department": "tech",
+    "response": "We are investigating the performance issue."
+  },
+  {
+    "email_text": "can someone explain features",
+    "sender": "lead6@mail.com",
+    "priority": "low",
+    "department": "sales",
+    "response": "We will explain the features in detail."
+  },
+  {
+    "email_text": "charged but service not activated",
+    "sender": "user13@gmail.com",
+    "priority": "high",
+    "department": "support",
+    "response": "We are reviewing your payment and activation issue."
+  },
+  {
+    "email_text": "trial expired too soon??",
+    "sender": "user14@gmail.com",
+    "priority": "medium",
+    "department": "support",
+    "response": "We will check your trial expiration issue."
+  },
+  {
+    "email_text": "need technical documentation",
+    "sender": "dev2@company.com",
+    "priority": "low",
+    "department": "tech",
+    "response": "We will share the technical documentation."
+  },
+  {
+    "email_text": "cant login, password reset not working",
+    "sender": "user15@gmail.com",
+    "priority": "high",
+    "department": "tech",
+    "response": "We are fixing the login and reset issue."
+  },
+  {
+    "email_text": "interested in enterprise plan",
+    "sender": "ceo@startup.com",
+    "priority": "medium",
+    "department": "sales",
+    "response": "Our sales team will contact you بشأن enterprise plans."
+  },
+  {
+    "email_text": "wtf app broken",
+    "sender": "user16@gmail.com",
+    "priority": "high",
+    "department": "tech",
+    "response": "We are urgently investigating the app issue."
+  }
 ]
