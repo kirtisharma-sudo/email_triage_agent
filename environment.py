@@ -1,0 +1,48 @@
+import random
+import json
+
+class EmailEnv:
+    def __init__(self, data_path="data/emails.json"):
+        with open(data_path, "r") as f:
+            self.dataset = json.load(f)
+        self.current = None
+
+    def reset(self):
+        self.current = random.choice(self.dataset)
+        return self._get_state()
+
+    def _get_state(self):
+        return {
+            "email_text": self.current["email_text"],
+            "sender": self.current["sender"],
+            "history": []
+        }
+
+    def step(self, action):
+        gt = self.current
+        reward = self._compute_reward(action, gt)
+        done = True
+
+        return self._get_state(), reward, done, {}
+
+    def _compute_reward(self, action, gt):
+        score = 0
+
+        if action.get("priority") == gt["priority"]:
+            score += 0.3
+
+        if action.get("department") == gt["department"]:
+            score += 0.3
+
+        response_score = self._text_similarity(
+            action.get("response", ""), gt["response"]
+        )
+
+        score += 0.4 * response_score
+
+        return min(max(score, 0.01), 0.99)
+
+    def _text_similarity(self, a, b):
+        a, b = a.lower(), b.lower()
+        overlap = len(set(a.split()) & set(b.split()))
+        return overlap / max(len(b.split()), 1)
