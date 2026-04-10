@@ -29,7 +29,7 @@ class EmailEnv:
         return self._get_state(), reward, True, {}
 
     def _compute_reward(self, action, gt):
-        score = 0
+        score = 0.0
 
         if action.get("priority") == gt["priority"]:
             score += 0.3
@@ -37,13 +37,15 @@ class EmailEnv:
         if action.get("department") == gt["department"]:
             score += 0.3
 
-        response_score = self._text_similarity(
-            action.get("response", ""), gt["response"]
-        )
+        pred = (action.get("response") or "").lower()
+        true = gt["response"].lower()
 
-        score += 0.4 * response_score
+        overlap = len(set(pred.split()) & set(true.split()))
+        sim = overlap / max(len(true.split()), 1)
 
-        return min(max(score, 0.01), 0.99)
+        score += 0.4 * sim
+
+        return score
 
     def _text_similarity(self, a, b):
         a, b = a.lower(), b.lower()
