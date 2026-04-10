@@ -3,10 +3,13 @@ from inference import policy
 
 def run():
     env = EmailEnv()
-    s = env.reset()
-    a = policy(s)
-    _, r, _, _ = env.step(a)
-    print({"reward": r})
+    state = env.reset()
+    action = policy(state)
+    _, reward, _, _ = env.step(action)
+
+    print("STATE:", state)
+    print("ACTION:", action)
+    print("REWARD:", reward)
 
 if __name__ == "__main__":
     run()
