@@ -1,0 +1,20 @@
+version: "1.0"
+
+env:
+  entry_point: "environment:EmailEnv"
+
+tasks:
+  - id: "priority_task"
+    description: "Classify priority"
+    difficulty: "easy"
+    grader: "tasks.priority.grader:grade"
+
+  - id: "routing_task"
+    description: "Classify priority and department"
+    difficulty: "medium"
+    grader: "tasks.routing.grader:grade"
+
+  - id: "full_task"
+    description: "Full email triage"
+    difficulty: "hard"
+    grader: "tasks.full.grader:grade"
