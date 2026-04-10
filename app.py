@@ -1,17 +1,12 @@
 from environment import EmailEnv
 from inference import policy
 
-def run_demo():
+def run():
     env = EmailEnv()
-    state = env.reset()
-    action = policy(state)
-    _, reward, _, _ = env.step(action)
-
-    return {
-        "state": state,
-        "action": action,
-        "reward": reward
-    }
+    s = env.reset()
+    a = policy(s)
+    _, r, _, _ = env.step(a)
+    print({"reward": r})
 
 if __name__ == "__main__":
-    print(run_demo())
+    run()
