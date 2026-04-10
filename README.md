@@ -23,6 +23,14 @@ Weighted scoring across:
 - routing
 - response similarity
 
+## Real-world relevance
+This environment simulates enterprise email triage workflows used in customer support automation.
+
+## Complexity
+- Multi-step reasoning
+- Noisy input
+- Multi-objective reward
+
 ## Run
 ```bash
 python inference.py
