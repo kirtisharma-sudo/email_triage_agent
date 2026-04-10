@@ -19,7 +19,7 @@
     "priority": "high",
     "department": "tech",
     "response": "Our technical team is investigating the issue."
-  }
+  },
   {
     "email_text": "I need a refund ASAP, this is unacceptable!",
     "sender": "user1@gmail.com",
