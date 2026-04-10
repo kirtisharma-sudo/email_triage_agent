@@ -3,18 +3,20 @@ from environment import EmailEnv
 def policy(state):
     text = state["email_text"].lower()
 
-    if "refund" in text or "immediately" in text:
+    priority = "low"
+    dept = "support"
+
+    if "refund" in text or "urgent" in text:
         priority = "high"
         dept = "support"
-    elif "price" in text:
+
+    elif "price" in text or "cost" in text:
         priority = "medium"
         dept = "sales"
-    elif "crash" in text:
+
+    elif "error" in text or "crash" in text:
         priority = "high"
         dept = "tech"
-    else:
-        priority = "low"
-        dept = "support"
 
     return {
         "priority": priority,
