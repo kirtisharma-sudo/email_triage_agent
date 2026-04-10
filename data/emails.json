@@ -35,7 +35,7 @@
     "response": "Our sales team will share pricing details shortly."
   },
   {
-    "email_text": "App crashes when I try login",
+    "email_text": "App crashes when I try to log in",
     "sender": "user2@mail.com",
     "priority": "high",
     "department": "tech",
@@ -49,7 +49,7 @@
     "response": "We are looking into your account access issue."
   },
   {
-    "email_text": "hello just wanted to know more about your plans",
+    "email_text": "hello, just wanted to know more about your plans",
     "sender": "lead2@company.com",
     "priority": "low",
     "department": "sales",
@@ -91,14 +91,14 @@
     "response": "We are investigating the login page issue."
   },
   {
-    "email_text": "can i get invoice for last month",
+    "email_text": "Can I get an invoice for last month?",
     "sender": "finance@client.com",
     "priority": "low",
     "department": "support",
     "response": "We will share your invoice shortly."
   },
   {
-    "email_text": "your service is down?? cant access anything",
+    "email_text": "your service is down?? can't access anything",
     "sender": "user6@gmail.com",
     "priority": "high",
     "department": "tech",
@@ -133,7 +133,7 @@
     "response": "We will schedule a demo for you shortly."
   },
   {
-    "email_text": "idk what happened but app stopped working",
+    "email_text": "idk what happened, but app stopped working",
     "sender": "user8@gmail.com",
     "priority": "medium",
     "department": "tech",
@@ -154,7 +154,7 @@
     "response": "We are urgently investigating the system failure."
   },
   {
-    "email_text": "how much does this cost monthly",
+    "email_text": "How much does this cost monthly?",
     "sender": "lead5@mail.com",
     "priority": "medium",
     "department": "sales",
@@ -210,7 +210,7 @@
     "response": "We will share the technical documentation."
   },
   {
-    "email_text": "cant login, password reset not working",
+    "email_text": "can't log in, password reset not working",
     "sender": "user15@gmail.com",
     "priority": "high",
     "department": "tech",
@@ -221,7 +221,7 @@
     "sender": "ceo@startup.com",
     "priority": "medium",
     "department": "sales",
-    "response": "Our sales team will contact you بشأن enterprise plans."
+    "response": "Our sales team will contact you regarding enterprise plans."
   },
   {
     "email_text": "wtf app broken",
