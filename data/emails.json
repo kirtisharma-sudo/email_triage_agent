@@ -1,0 +1,23 @@
+[
+  {
+    "email_text": "I need a refund for my order immediately!",
+    "sender": "customer1@gmail.com",
+    "priority": "high",
+    "department": "support",
+    "response": "We are processing your refund request urgently."
+  },
+  {
+    "email_text": "Can you provide pricing details?",
+    "sender": "lead@company.com",
+    "priority": "medium",
+    "department": "sales",
+    "response": "Our sales team will share pricing details shortly."
+  },
+  {
+    "email_text": "App crashes when I log in",
+    "sender": "user@domain.com",
+    "priority": "high",
+    "department": "tech",
+    "response": "Our technical team is investigating the issue."
+  }
+]
