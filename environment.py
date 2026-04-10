@@ -1,53 +1,80 @@
-import random
+import os
 import json
+import random
+
 
 class EmailEnv:
     def __init__(self, data_path="data/emails.json"):
-        with open(data_path, "r") as f:
+        # -----------------------------
+        # SAFE PATH HANDLING (IMPORTANT)
+        # -----------------------------
+        BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+        DATA_PATH = os.path.join(BASE_DIR, data_path)
+
+        with open(DATA_PATH, "r", encoding="utf-8") as f:
             self.dataset = json.load(f)
+
         self.current = None
 
+    # -----------------------------
+    # RESET ENVIRONMENT
+    # -----------------------------
     def reset(self):
         self.current = random.choice(self.dataset)
         return self._get_state()
 
+    # -----------------------------
+    # GET STATE
+    # -----------------------------
     def _get_state(self):
         return {
-            "email_text": self.current["email_text"],
-            "sender": self.current["sender"],
+            "email_text": self.current.get("email_text", ""),
+            "sender": self.current.get("sender", ""),
             "history": []
         }
 
+    # -----------------------------
+    # STEP FUNCTION (MAIN LOGIC)
+    # -----------------------------
     def step(self, action):
         gt = self.current
 
         reward = self._compute_reward(action, gt)
 
-    # SAFETY CLAMP (MANDATORY for hackathon)
+        # HARD SAFETY CLAMP (MANDATORY for hackathon)
         reward = float(max(0.01, min(0.99, reward)))
 
-        return self._get_state(), reward, True, {}
+        done = True
 
+        return self._get_state(), reward, done, {}
+
+    # -----------------------------
+    # REWARD FUNCTION
+    # -----------------------------
     def _compute_reward(self, action, gt):
         score = 0.0
 
-        if action.get("priority") == gt["priority"]:
+        # priority match
+        if action.get("priority") == gt.get("priority"):
             score += 0.3
 
-        if action.get("department") == gt["department"]:
+        # department match
+        if action.get("department") == gt.get("department"):
             score += 0.3
 
+        # response similarity (simple overlap-based)
         pred = (action.get("response") or "").lower()
-        true = gt["response"].lower()
+        true = (gt.get("response") or "").lower()
 
-        overlap = len(set(pred.split()) & set(true.split()))
-        sim = overlap / max(len(true.split()), 1)
+        pred_words = set(pred.split())
+        true_words = set(true.split())
 
-        score += 0.4 * sim
+        if len(true_words) > 0:
+            overlap = len(pred_words & true_words)
+            similarity = overlap / len(true_words)
+        else:
+            similarity = 0.0
+
+        score += 0.4 * similarity
 
         return score
-
-    def _text_similarity(self, a, b):
-        a, b = a.lower(), b.lower()
-        overlap = len(set(a.split()) & set(b.split()))
-        return overlap / max(len(b.split()), 1)
