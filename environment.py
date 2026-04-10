@@ -20,10 +20,13 @@ class EmailEnv:
 
     def step(self, action):
         gt = self.current
-        reward = self._compute_reward(action, gt)
-        done = True
 
-        return self._get_state(), reward, done, {}
+        reward = self._compute_reward(action, gt)
+
+    # SAFETY CLAMP (MANDATORY for hackathon)
+        reward = float(max(0.01, min(0.99, reward)))
+
+        return self._get_state(), reward, True, {}
 
     def _compute_reward(self, action, gt):
         score = 0
