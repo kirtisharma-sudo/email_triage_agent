@@ -1,3 +1,8 @@
+![Python](https://img.shields.io/badge/Python-3.12-blue.svg)
+![OpenEnv](https://img.shields.io/badge/OpenEnv-Compatible-purple)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688)
+![Docker](https://img.shields.io/badge/Docker-Container-blue)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 ---
 title: Email Triage OpenEnv
 emoji: 📧
